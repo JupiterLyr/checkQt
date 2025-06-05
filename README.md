@@ -1,4 +1,5 @@
 # 基于C++和CMake及Qt框架的GUI软件开发基础配置
+
 ## 环境配置
 #### 1. 安装Visual Studio Code
 Visual Studio Code是一款代码编辑器，由于其自由度高、插件丰富，因此很多开发者会选择使用这款编辑器。但是Visual Studio Code不含编译器，需要自行配置。
