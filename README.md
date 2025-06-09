@@ -61,13 +61,15 @@ Material Icon Theme
 此时，在安装有CMake Tools插件的前提下，生成CMake，此时会出现一个build文件夹，再运行程序即可跑通。
 
 #### 4. 模块化
-若工程是模块化的，即源文件放置于 `src` 文件夹内，头文件放置在 `include` 文件夹内，动态库在 `bin` 内，静态库在 `lib` 内，诸如此类，则在 `CMakeLists.txt` 中要手动修改 `main.cpp` 、 `mainwindow.cpp` 和 `mainwindow.h` 文件的路径，比如：
+若工程是模块化的，即源文件放置于 `src` 文件夹内，头文件放置在 `include` 文件夹内，动态库在 `bin` 内，静态库在 `lib` 内，诸如此类.在 `CMakeLists.txt` 中，要手动修改源文件、头文件、链接库等，比如：
 ```CMake
-set(PROJECT_SOURCES
-        src/main.cpp
-        src/mainwindow.cpp
-        include/mainwindow.h
-        mainwindow.ui
-)
+# 设置头文件目录
+include_directories(${PROJECT_SOURCE_DIR}/include)
+# 添加源文件
+aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_FILES)
+# 添加可执行文件
+add_executable(checkQt ${SRC_FILES})
+# 链接 Qt 库
+target_link_libraries(checkQt PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Widgets)
 ```
 如无需配置Android和MacOS系统的UI，则可以删去 `CMakeLists.txt` 中相关部分代码。
