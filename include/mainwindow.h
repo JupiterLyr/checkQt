@@ -3,15 +3,14 @@
 
 #include <QMainWindow>
 
-QT_BEGIN_NAMESPACE
+// 确保 Ui 命名空间的前向声明正确
 namespace Ui {
-class MainWindow;
+    class MainWindow;
 }
-QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+    // Q_OBJECT  // 需要用到信号和槽时要加回来
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -20,4 +19,5 @@ public:
 private:
     Ui::MainWindow *ui;
 };
+
 #endif // MAINWINDOW_H

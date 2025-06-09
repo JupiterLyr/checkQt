@@ -1,10 +1,18 @@
-#include "../include/mainwindow.h"
-#include "./ui_mainwindow.h"
+#include "mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+#include <QtCore/qlogging.h>
+#include <QtCore/qnamespace.h>
+
+#include <iostream>
+#include <QThread>
+#include <QWidget>
+
+#include "ui.h"
+
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
+    std::cout << "MainWindow threadId: " << QThread::currentThreadId() << std::endl;
+    ui = new Ui::MainWindow();
     ui->setupUi(this);
 }
 
