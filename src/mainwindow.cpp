@@ -9,7 +9,7 @@
 
 #include "ui.h"
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
+MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent)
 {
     std::cout << "MainWindow threadId: " << QThread::currentThreadId() << std::endl;
     ui = new Ui::MainWindow();

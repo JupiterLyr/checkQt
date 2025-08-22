@@ -6,7 +6,7 @@
 namespace Ui {
     class MainWindow {
     public:
-        void setupUi(QMainWindow *mainWindow);
+        void setupUi(QMainWindow* mainWindow);
     };
 }
 

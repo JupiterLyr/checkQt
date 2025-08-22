@@ -1,3 +1,12 @@
+# Check Qt 简介
+**该项目旨在备份MinGW编译器在C++语言下基于Qt开发软件的框架，任何满足条件的软件都可以直接套用该模板进行开发。**
+当前版本：**V2.0**。已经实现了下列功能：
++ 头文件、源文件等模块化，且分别位于 `include` 和 `src` 目录。
++ 可读取资源文件，放置在 `resource` 中。
++ 配置完成了CMake选项，并生成了Release版软件目录，见 `build/Release`。
++ 包含了专用于Qt的 `.vscode` 配置文件。
+---
+
 # 基于C++和CMake及Qt框架的GUI软件开发基础配置
 
 ## 环境配置
@@ -73,3 +82,6 @@ add_executable(checkQt ${SRC_FILES})
 target_link_libraries(checkQt PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Widgets)
 ```
 如无需配置Android和MacOS系统的UI，则可以删去 `CMakeLists.txt` 中相关部分代码。
+
+## 生成 Release 版软件
+当前已经更新了 `CMakeLists.txt` 使其能在 `build` 下生成 `Release` 的独立软件，可以直接将代码迁移至其他工程中，稍作修改后即可使用。
