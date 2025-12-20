@@ -20,8 +20,10 @@ set(CMAKE_PREFIX_PATH "D:/Qt/6.9.1/mingw_64/lib/cmake")
 include_directories(${PROJECT_SOURCE_DIR}/include)
 # 添加源文件
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_FILES)
+# 其他配置文件
+set(RC_FILES ${PROJECT_SOURCE_DIR}/icon_config.rc)
 # 添加可执行文件
-add_executable(${PROJECT_NAME} ${SRC_FILES})
+add_executable(${PROJECT_NAME} ${SRC_FILES} ${RC_FILES})
 set_target_properties(${PROJECT_NAME} PROPERTIES
     WIN32_EXECUTABLE TRUE   # 不显示 CMD 窗口
 )
