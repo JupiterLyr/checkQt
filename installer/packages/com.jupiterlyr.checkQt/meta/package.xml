@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>Check Qt</DisplayName>
+    <Description>
+        基于 Qt 的演示模板，仅用于调试，后续任何相关开发均可采用该源码模板。
+    </Description>
+    <Version>2.2.0</Version>
+    <ReleaseDate>2025-12-20</ReleaseDate>
+    <Default>true</Default>
+    <Script>installscript.qs</Script>
+</Package>

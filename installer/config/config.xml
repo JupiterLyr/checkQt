@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>Check Qt</Name>
+    <Version>2.2.0</Version>
+    <Title>Check Qt Installer</Title>
+    <Publisher>JupiterLyr</Publisher>
+    <TargetDir>@ApplicationsDirX64@/CheckQt</TargetDir> <!-- 默认安装路径 -->
+
+    <WizardStyle>Modern</WizardStyle>
+    <WizardDefaultWidth>600</WizardDefaultWidth>
+    <WizardDefaultHeight>400</WizardDefaultHeight>
+    <WizardShowPageList>false</WizardShowPageList>
+    <StyleSheet>config/style.qss</StyleSheet>
+</Installer>
