@@ -4,7 +4,9 @@
 #include <QCoreApplication>
 #include <QDir>
 #include <QFileInfo>
+#include <QLabel>
 #include <QMessageBox>
+#include <QVBoxLayout>
 #include <QWidget>
 
 namespace Ui {
@@ -19,5 +21,10 @@ namespace Ui {
             mainWindow->setWindowIcon(QIcon(iconPath));
         else
             QMessageBox::warning(nullptr, "Warning", "Icon file does not exist!");
+        
+        QVBoxLayout* mainLayout = new QVBoxLayout(centralWidget);
+        QLabel *show_version = new QLabel("Template v2.3");
+        show_version->setAlignment(Qt::AlignCenter);
+        mainLayout->addWidget(show_version);
     }
 }; // namespace Ui

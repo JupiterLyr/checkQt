@@ -2,7 +2,7 @@
 **该项目旨在备份 MinGW 编译器在 C++ 语言下基于 Qt 开发软件的框架，任何满足条件的软件都可以直接套用该模板进行开发。**</br>
 **This project aims to back up the framework of MinGW compiler developing software based on Qt in C++ language, and any software that meets the requirements can be directly developed by applying this template.**</br>
 
-Current Version: **V2.2**. The following functions have been realized:
+Current Version: **V2.3**. The following functions have been realized:
 - 头文件、源文件等模块化，且分别位于 `include` 和 `src` 目录。
 - 可读取资源文件，放置在 `resource` 中。
 - 配置完成了 CMake 选项，并生成了 Release 版软件目录，见 `build/Release`。
