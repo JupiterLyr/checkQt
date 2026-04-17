@@ -2,13 +2,21 @@
 **该项目旨在备份 MinGW 编译器在 C++ 语言下基于 Qt 开发软件的框架，任何满足条件的软件都可以直接套用该模板进行开发。**</br>
 **This project aims to back up the framework of MinGW compiler developing software based on Qt in C++ language, and any software that meets the requirements can be directly developed by applying this template.**</br>
 
-Current Version: **V2.3**. The following functions have been realized:
+**Note**: </br>
+该版本的开发框架需要手动编写 `ui.h` 和 `ui.cpp`，如要兼容利用 Qt Creator 的 `*.ui` 文件，请移步：</br>
+This version of the development framework needs to manually write `ui.h` and `ui.cpp`. To be compatible with the `*.ui` file of Qt Creator, please visit:</br>
+[Check Qt -- with UI Configuration](https://github.com/JupiterLyr/checkQt--withUIconfig)
+
+---
+
+Current Version: **V3.0**. The following functions have been realized:
 - 头文件、源文件等模块化，且分别位于 `include` 和 `src` 目录。
 - 可读取资源文件，放置在 `resource` 中。
 - 配置完成了 CMake 选项，并生成了 Release 版软件目录，见 `build/Release`。
 - 包含了专用于 Qt 的 `.vscode` 配置文件，但 JSON 具体配置需根据特定计算机进行调整。
 - 加入了 `icon_config.rc`，配置了图标文件。
 - 增设了安装包配置文件（详见 `installer/config/` 和 `installer/packages`），并用批处理文件 `create_installer.bat` 创建安装包。
+- 当前版本的 `CmakeLists.txt` 可以在简单修改后兼容 `*.ui` 文件的配置。
 
 - The header files and source files are modularized and located in the `include` and `src` directories respectively.
 - The resource file to be read is placed in `resource`.
@@ -16,6 +24,8 @@ Current Version: **V2.3**. The following functions have been realized:
 - The `.vscode` configuration file dedicated to Qt is already included. However, the JSON configuration needs to be adjusted according to the situation of a specific computer.
 - The `icon_config.rc` is added and the icon file is configured.
 - The installation package configuration file is completed (see `installer/config/` and `installer/packages/` for details). The installation package is created with the batch file `create_installer.bat`.
+- The current version of `CmakeLists.txt` can be compatible with the configuration of `*.ui` file after simple modification.
+
 ---
 
 # 基于C++和CMake及Qt框架的GUI软件开发基础配置</br>Basic Configuration of GUI Software Dev. Based on C++, CMake & Qt Framework
